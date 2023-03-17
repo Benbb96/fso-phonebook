@@ -79,6 +79,16 @@ app.get('/api/persons/:id', (request, response) => {
   }
 })
 
+app.patch('/api/persons/:id', (request, response) => {
+  const person = persons.find(p => p.id === Number(request.params.id))
+  if (person) {
+    console.error('PATCH not implemented')
+    response.status(500).end()
+  } else {
+    response.status(404).end()
+  }
+})
+
 app.delete('/api/persons/:id', (request, response) => {
   persons = persons.filter(p => p.id !== Number(request.params.id))
   response.status(204).end()
