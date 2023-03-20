@@ -1,0 +1,6 @@
+PATCH http://localhost:3001/api/persons/6414850de7ca51fa387da7d5
+Content-Type: application/json
+
+{
+  "name": "1"
+}
